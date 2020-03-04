@@ -1,3 +1,3 @@
 exports.helloWorld = async (event, context) => {
-    console.log("Hello World!");
+    console.log("Hello World 2!");
 }
