@@ -3,7 +3,15 @@ steps:
     args:
       - functions
       - deploy
+      - cf-custom-match-request
+      - --source=./first
+      - --trigger-topic=custom-match-trigger
+      - --runtime=nodejs8
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args:
+      - functions
+      - deploy
       - cf-github-test
-      - --source=.
-      - --trigger-topic=cf-send-event
+      - --source=./second
+      - --trigger-topic=cf-custom-match-trigger
       - --runtime=nodejs8
