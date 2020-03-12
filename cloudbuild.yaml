@@ -1,5 +1,6 @@
 steps:
   - name: 'gcr.io/cloud-builders/gcloud'
+    id: first
     args:
       - functions
       - deploy
@@ -8,6 +9,7 @@ steps:
       - --trigger-topic=custom-match-trigger
       - --runtime=nodejs8
   - name: 'gcr.io/cloud-builders/gcloud'
+    id: second
     args:
       - functions
       - deploy
