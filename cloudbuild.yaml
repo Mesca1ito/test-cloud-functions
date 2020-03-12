@@ -3,7 +3,7 @@ steps:
     args:
       - functions
       - deploy
-      - cf-custom-match-request
+      - cf-github-test
       - --source=./first
       - --trigger-topic=custom-match-trigger
       - --runtime=nodejs8
@@ -11,7 +11,7 @@ steps:
     args:
       - functions
       - deploy
-      - cf-github-test
+      - cf-github-test-2
       - --source=./second
       - --trigger-topic=cf-custom-match-trigger
       - --runtime=nodejs8
